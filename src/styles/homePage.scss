@@ -1,0 +1,13 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .bottomTabBar{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 56px;
+    border-top: 1px solid rgba(196,196,196,.3);
+    padding-top: 4px;
+  }
+}
