@@ -9,6 +9,7 @@ import StarLevel from "./pages/StarLevel";
 import Commission from "./pages/Commission";
 import {AppOutline, MessageOutline, UnorderedListOutline, UserOutline} from "antd-mobile-icons";
 import {TabBar} from "antd-mobile";
+
 const Bottom: FC = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -48,7 +49,7 @@ const Bottom: FC = () => {
             ))}
         </TabBar>
     )
-}
+};
 function App() {
     return (
         <div className="App">

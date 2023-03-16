@@ -1,0 +1,24 @@
+@import "common";
+.StarLevel {
+  .datePicker {
+    height: 44px;
+    width: 100vw;
+    .datePickerText{
+      width: 90%;
+      background: #ecf2f6;
+      border-radius: 24px;
+      height: 24px;
+      line-height: 26px;
+      max-height: 48px;
+      text-align: center;
+      vertical-align: middle;
+      color: #A4A4A4;
+      .datePickerSpan{
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
