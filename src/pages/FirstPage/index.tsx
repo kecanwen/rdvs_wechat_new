@@ -7,9 +7,7 @@ import bonus from '../../asserts/imgs/firstPage/ticheng.png'
 import group from '../../asserts/imgs/firstPage/Group.png'
 import group18 from '../../asserts/imgs/firstPage/Group18.png'
 import smallNoData from '../../asserts/imgs/firstPage/smallnoData.png'
-interface ImageInterface {
-    imgURL:string
-}
+
 function FirstPage() {
     const [swiperList,setSwiperList] = useState<ImageInterface[]>([]);
     useEffect(() => {
@@ -47,14 +45,13 @@ function FirstPage() {
             </div>
         </Fragment>
     };
-    interface titleFace {
-        title:string
-    }
+
     const Subtitle: React.FC<titleFace> = ({title}) =>{
       return <Fragment>
           <div className='subtitle'>{title}</div>
       </Fragment>
     };
+
     const RecordCom = () => {
         return   <Fragment>
             <div className='recordWrap'>

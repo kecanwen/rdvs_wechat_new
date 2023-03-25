@@ -1,24 +1,164 @@
 @import "common";
 .StarLevel {
-  .datePicker {
-    height: 44px;
-    width: 100vw;
-    .datePickerText{
-      width: 90%;
-      background: #ecf2f6;
-      border-radius: 24px;
-      height: 24px;
-      line-height: 26px;
-      max-height: 48px;
-      text-align: center;
-      vertical-align: middle;
-      color: #A4A4A4;
-      .datePickerSpan{
+  background: #fafafa;
+  .StarDetailContent{
+    padding: 4px 4%;
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .starLeft{
+      font-size: 15px;
+      .starLeftTitle{
+        line-height: 20px;
+        color: #333;
+        font-weight: 700;
+      }
+    }
+    .starRight{
+      .starRightText{
         font-size: 14px;
+        line-height: 17px;
+        color: #333;
         font-weight: 400;
-        margin-right: 6px;
+      }
+    }
+    svg{
+      margin-left: 3px;
+    }
+  }
+  .StarLevelTop{
+    background: white;
+    .datePicker {
+      height: 44px;
+      width: 100vw;
+      .datePickerText{
+        width: 90%;
+        background: #ecf2f6;
+        border-radius: 24px;
+        height: 24px;
+        line-height: 26px;
+        max-height: 48px;
+        text-align: center;
+        vertical-align: middle;
+        color: #A4A4A4;
+        .datePickerSpan{
+          font-size: 14px;
+          font-weight: 400;
+          margin-right: 6px;
+        }
+      }
+    }
+    .GradeCom{
+      padding: 4px 4%;
+      position: relative;
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      .gradeComLeft{
+        position: relative;
+        flex: 3;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        word-wrap: break-word;
+        .score{
+          height: 64px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .scoreNum{
+            padding-right: calc(375 / 750 * 8px);
+            padding-left: calc(375 / 750 * 16px);
+            font-size: 52px;
+            line-height: 52px;
+          }
+          .unit{
+            font-weight: 400;
+            font-size: 12px;
+            color: #09090a;
+            display: table-cell;
+            vertical-align: text-bottom;
+          }
+        }
+        .starOutline{
+          transform: scale(1.3);
+          display: flex;
+          padding: 0 11px 11px;
+          position: relative;
+        }
+        .send_yellow{
+          position: relative;
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          width: 90%;
+          height: 20px;
+          color: #b4771f;
+          border-radius: 4px;
+          background-color: #FFDD97;
+          .send-txt{
+
+          }
+          .send-img{
+            transform: translateY(2px);
+          }
+        }
+      }
+      .gradeRight{
+        display: list-item;
+        text-align: -webkit-match-parent;
+        flex: 6.2;
+        position: relative;
+        height: 100%;
+        padding-right: 10px;
+        ul{
+          li{
+            height: 22px;
+            display: flex;
+            align-items: center;
+            .name{
+              flex: 3;
+            }
+            .score{
+              flex: 7;
+            }
+          }
+        }
+      }
+    }
+    .FeedBack{
+      padding: 10px 4%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .feedbackItem{
+        img{
+          height: 30px;
+        }
       }
     }
   }
+  .StarLevelBottom{
+    margin-top: 10px;
+    height: 400px;
+    background: white;
+  }
+
 }
 
