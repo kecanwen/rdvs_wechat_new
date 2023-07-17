@@ -14,7 +14,12 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use(config=>{
-  let urlParameter = getSearchParams();
+  //let urlParameter = getSearchParams();
+  let urlParameter = {
+    wechat_requesttype: "20000",
+    wechat_usercode: "336745",
+    wechat_token: "20000-c5de4d10-27f3-454e-82e3-3601407a9eb7"
+  };
   let header:any = config.headers;
   header = Object.assign(header,urlParameter);
   config.headers = header;

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {BrowserRouter, Routes, Route, useNavigate, useLocation} from 'react-router-dom'
 import './App.css';
 import './styles/homePage.scss'
@@ -9,8 +9,10 @@ import StarLevel from "./pages/StarLevel";
 import Commission from "./pages/Commission";
 import {AppOutline, MessageOutline, UnorderedListOutline, UserOutline} from "antd-mobile-icons";
 import {TabBar} from "antd-mobile";
+import appService from "./server/appService";
 
 const Bottom: FC = () => {
+    const needBottomNavMap = ['FirstPage','Commission','StarLevel','Myself','404']
     const navigate = useNavigate();
     const location = useLocation();
     const { pathname } = location;
@@ -40,7 +42,7 @@ const Bottom: FC = () => {
             title: '我',
             icon: <UserOutline />,
         },
-    ]
+    ];
 
     return (
         <TabBar activeKey={pathname} onChange={value => setRouteActive(value)}>
@@ -50,7 +52,21 @@ const Bottom: FC = () => {
         </TabBar>
     )
 };
+
 function App() {
+    const [userInfo,setUserInfo] = useState({});
+    useEffect(()=>{
+        getWeChatUserInfo();
+    },[]);
+
+    const getWeChatUserInfo = ()=>{
+        appService.getWeChatUserInfoApi.then((res:resInterface):void =>{
+            if(res.success){
+
+            }
+        })
+    };
+
     return (
         <div className="App">
             <BrowserRouter>
@@ -62,6 +78,9 @@ function App() {
                     <Route path="/StarLevel" element={<StarLevel/>}/>
                     <Route path="/Myself" element={<Myself/>}/>
                 </Routes>
+                {
+
+                }
                 <div className='bottomTabBar'>
                     <Bottom />
                 </div>

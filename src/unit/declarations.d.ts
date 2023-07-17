@@ -17,3 +17,10 @@ interface ballInterface{
     mainTitle:string,
     cardList:Array<any>
 }
+
+interface resInterface {
+    message:string,
+    success:number,
+    data:any,
+    total:number
+}
