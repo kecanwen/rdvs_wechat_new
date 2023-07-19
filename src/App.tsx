@@ -60,11 +60,11 @@ function App() {
     },[]);
 
     const getWeChatUserInfo = ()=>{
-        appService.getWeChatUserInfoApi.then((res:resInterface):void =>{
+      /*  appService.getWeChatUserInfoApi.then((res:resInterface):void =>{
             if(res.success){
 
             }
-        })
+        })*/
     };
 
     return (
