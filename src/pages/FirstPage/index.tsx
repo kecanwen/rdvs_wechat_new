@@ -7,10 +7,12 @@ import bonus from '../../asserts/imgs/firstPage/ticheng.png'
 import group from '../../asserts/imgs/firstPage/Group.png'
 import group18 from '../../asserts/imgs/firstPage/Group18.png'
 import smallNoData from '../../asserts/imgs/firstPage/smallnoData.png'
+import { useRequest } from 'ahooks';
 
 function FirstPage() {
     const [swiperList,setSwiperList] = useState<ImageInterface[]>([]);
     useEffect(() => {
+        console.log(useRequest,'useRequestuseRequestuseRequestuseRequest')
         carouselList();
     }, []);
     const swiperItems = swiperList.map((item, index) => (
